@@ -12,7 +12,7 @@ export const metadata = {
   title: "Blogger",
   description: "created by dipson shiwakoti",
   icons: {
-    icon: "/images/favicon.png",
+    icon: "/assets/favicon.png",
   },
 };
 
