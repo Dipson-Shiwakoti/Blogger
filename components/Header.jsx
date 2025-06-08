@@ -113,10 +113,7 @@ const Header = ({ imgUrl, userName }) => {
       <div className="text-center my-8">
         <h1 className="text-3xl sm:text-5xl font-medium">Latest Blogs</h1>
         <p className="mt-10 max-w-[740px] mx-auto text-xs sm:text-base">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit,
-          minus. Porro, incidunt dolorum quos est consectetur corporis sapiente
-          ipsa optio saepe quas, ut voluptatem cumque aspernatur aperiam, dolor
-          unde velit?
+Welcome to our latest collection of blog posts, where we share fresh ideas, thoughtful reflections, and practical insights. From exploring the power of simplicity in a cluttered world to uncovering the behind-the-scenes journey of building purposeful web applications, our newest entries are crafted to inspire and inform. We also take a closer look at how small, consistent habits can lead to meaningful changes over time. Whether you're here for knowledge, motivation, or a moment of clarity, there's something new waiting for you to explore.
         </p>
 
         <form
