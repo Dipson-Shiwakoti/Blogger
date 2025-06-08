@@ -10,9 +10,9 @@ const poppins = Poppins({
 
 export const metadata = {
   title: "Blogger",
-  description: "created by dipson shiwakoti",
+  description: "created by Dipson Shiwakoti",
   icons: {
-    icon: "/assets/favicon.png",
+    icon: "/assets/favicon.png", 
   },
 };
 
