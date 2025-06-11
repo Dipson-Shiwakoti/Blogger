@@ -10,7 +10,7 @@ import { useAuth } from "@/context/AuthContext";
 import ImageHeader from "@/components/ImageHeader";
 import { supabase } from "@/lib/superbaseClient";
 
-const page = () => {
+export default function SignupPage() {
   const [loading, setloading] = useState(false);
   const router = useRouter();
   const { token } = useAuth();
@@ -45,6 +45,17 @@ const page = () => {
       return;
     }
 
+    const isStrongPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/.test(
+      data.password
+    );
+
+    if (!isStrongPassword) {
+      toast.error(
+        "Password must be at least 8 characters and include uppercase, lowercase, and a number."
+      );
+      return;
+    }
+
     if (!image) {
       toast.error("Please upload a profile picture");
       return;
@@ -63,12 +74,10 @@ const page = () => {
         throw uploadError;
       }
 
-      // 2. Get the public URL
       const {
         data: { publicUrl },
       } = supabase.storage.from("images").getPublicUrl(filePath);
 
-      // 3. Prepare form data
       const formData = new FormData();
       formData.append("name", data.name);
       formData.append("email", data.email);
@@ -190,4 +199,4 @@ const page = () => {
   );
 };
 
-export default page;
+
